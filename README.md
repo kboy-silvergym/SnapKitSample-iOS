@@ -1,4 +1,6 @@
-![snapkit-sample-ios](https://user-images.githubusercontent.com/17683316/42133351-94e1ae2e-7d63-11e8-937c-1079d16d5517.png)
+![snapkit-sample-ios](https://user-images.githubusercontent.com/17683316/42133403-9456adb4-7d64-11e8-9f82-c9c52a0c618d.png)
+
+This is an unofficial demo app of the Snap Kit produced by SnapChat.
 
 ## Login Kit demo
 <img src="https://user-images.githubusercontent.com/17683316/42131965-12afd184-7d49-11e8-931b-0ef5578157df.png" width="100">
