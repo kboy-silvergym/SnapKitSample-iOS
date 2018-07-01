@@ -25,13 +25,38 @@ If you didn't equalize that, the SnapChat App would show the error.
 If you use `-` like `snap-client`, the SnapChat App would show the error.
 I don't know the reason, but it seems to be the rule of SnapChat Developer Potal.
 
-## Bitmoji Kit
-<img src="https://user-images.githubusercontent.com/17683316/42131995-9914d864-7d49-11e8-95de-f8c053b2f706.png" width="100">
-
-WIP..
-
 ## Creative Kit
 <img src="https://user-images.githubusercontent.com/17683316/42131997-9b7b3b8e-7d49-11e8-9651-092cf14fed1e.png" width="100">
+
+Following this document https://docs.snapchat.com/docs/creative-kit/ 
+This is so easy to code.
+
+Only you should do is just coding like below.
+
+```swift
+import SCSDKCreativeKit
+
+let snapshot = sceneView.snapshot() // Any image is OK. In this codes, SceneView's snapshot is passed.
+let photo = SCSDKSnapPhoto(image: snapshot)
+let snap = SCSDKPhotoSnapContent(snapPhoto: photo)
+snap.attachmentUrl = "https://newcapsulecorp.com"
+        
+let api = SCSDKSnapAPI(content: snap)
+api.startSnapping { error in
+            
+    if let error = error {
+        print(error.localizedDescription)
+    } else {
+    // success
+    
+    }
+}
+```
+
+<img src="https://user-images.githubusercontent.com/17683316/42136191-ef25554c-7d91-11e8-97ac-42df7903dbbb.gif" width="250">
+
+## Bitmoji Kit
+<img src="https://user-images.githubusercontent.com/17683316/42131995-9914d864-7d49-11e8-95de-f8c053b2f706.png" width="100">
 
 WIP..
 
