@@ -94,7 +94,7 @@ import SCSDKCreativeKit
 let snapshot = sceneView.snapshot() // Any image is OK. In this codes, SceneView's snapshot is passed.
 let photo = SCSDKSnapPhoto(image: snapshot)
 let snap = SCSDKPhotoSnapContent(snapPhoto: photo)
-snap.attachmentUrl = "https://newcapsulecorp.com"
+snap.attachmentUrl = "https://www.graffity.jp/"
         
 let api = SCSDKSnapAPI(content: snap)
 api.startSnapping { error in
