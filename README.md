@@ -1,4 +1,4 @@
-# SnapKitSample iOS
+![snapkit-sample-ios](https://user-images.githubusercontent.com/17683316/42133351-94e1ae2e-7d63-11e8-937c-1079d16d5517.png)
 
 ## Login Kit demo
 <img src="https://user-images.githubusercontent.com/17683316/42131965-12afd184-7d49-11e8-931b-0ef5578157df.png" width="100">
@@ -33,3 +33,6 @@ WIP..
 
 WIP..
 
+## Reference
+https://kit.snapchat.com/
+https://storage.googleapis.com/snap-inc/brand-guidelines/snapchat-brand-standards.pdf
