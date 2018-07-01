@@ -1,0 +1,10 @@
+interface SCAuthorizationRequest
+    NSString *responseType
+    NSString *clientId
+    NSString *scope
+    NSString *redirectUri
+    NSString *state
+    NSString *codeVerifier
+    NSString *codeChallengeMethod
+    NSString *codeChallenge
+end

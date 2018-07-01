@@ -1,0 +1,7 @@
+interface SCAuthToken
+    NSString *accessToken
+    NSString *tokenType
+    NSString *refreshToken
+    long long expiresAt
+    long long lastUpdated
+end

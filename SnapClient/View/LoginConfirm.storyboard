@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pie-bE-Btc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Confirm View Controller-->
+        <scene sceneID="mek-FD-1JH">
+            <objects>
+                <viewController id="pie-bE-Btc" customClass="LoginConfirmViewController" customModule="SnapClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9sG-xi-rNz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QMs-ym-sDd">
+                                <rect key="frame" x="137" y="100" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="GgV-pV-yYd"/>
+                                    <constraint firstAttribute="height" constant="100" id="mDa-He-Fff"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opR-Nm-GHM">
+                                <rect key="frame" x="159" y="208" width="57.5" height="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTl-ka-iGO">
+                                <rect key="frame" x="37.5" y="303" width="300" height="60"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="71i-VQ-JvS"/>
+                                    <constraint firstAttribute="height" constant="60" id="J1y-6O-Gv2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="GO">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="goButtonTapped:" destination="pie-bE-Btc" eventType="touchUpInside" id="3j2-lm-6NV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="opR-Nm-GHM" firstAttribute="top" secondItem="QMs-ym-sDd" secondAttribute="bottom" constant="8" id="7xT-fR-1i0"/>
+                            <constraint firstItem="tTl-ka-iGO" firstAttribute="centerY" secondItem="9sG-xi-rNz" secondAttribute="centerY" id="CJs-xt-cf9"/>
+                            <constraint firstItem="QMs-ym-sDd" firstAttribute="top" secondItem="Z1f-cO-Pwx" secondAttribute="top" constant="80" id="KWe-MW-NLs"/>
+                            <constraint firstItem="opR-Nm-GHM" firstAttribute="centerX" secondItem="9sG-xi-rNz" secondAttribute="centerX" id="U9M-iV-FqL"/>
+                            <constraint firstItem="QMs-ym-sDd" firstAttribute="centerX" secondItem="9sG-xi-rNz" secondAttribute="centerX" id="mDH-ZL-gMr"/>
+                            <constraint firstItem="tTl-ka-iGO" firstAttribute="centerX" secondItem="9sG-xi-rNz" secondAttribute="centerX" id="vwa-fm-7AA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Z1f-cO-Pwx"/>
+                    </view>
+                    <connections>
+                        <outlet property="avatarImageView" destination="QMs-ym-sDd" id="esA-cD-cuk"/>
+                        <outlet property="goButton" destination="tTl-ka-iGO" id="eeh-Fv-v2k"/>
+                        <outlet property="nameLabel" destination="opR-Nm-GHM" id="sjj-zK-H1W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RAW-7U-WBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="249" y="172"/>
+        </scene>
+    </scenes>
+</document>
