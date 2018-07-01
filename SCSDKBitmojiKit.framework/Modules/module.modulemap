@@ -1,6 +1,0 @@
-framework module SCSDKBitmojiKit {
-  umbrella header "SCSDKBitmojiKit.h"
-
-  export *
-  module * { export * }
-}

@@ -16,31 +16,10 @@
 		28C322D820D3D6000045E02A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C322D620D3D6000045E02A /* Main.storyboard */; };
 		28C322DA20D3D6020045E02A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C322D920D3D6020045E02A /* Assets.xcassets */; };
 		28C322DD20D3D6020045E02A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C322DB20D3D6020045E02A /* LaunchScreen.storyboard */; };
-		28C322F120D3D6900045E02A /* SCSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C322ED20D3D68F0045E02A /* SCSDKLoginKit.framework */; };
-		28C322F220D3D6900045E02A /* SCSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 28C322ED20D3D68F0045E02A /* SCSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		28C322F520D3D6900045E02A /* SCSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C322EF20D3D6900045E02A /* SCSDKCoreKit.framework */; };
-		28C322F620D3D6900045E02A /* SCSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 28C322EF20D3D6900045E02A /* SCSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		28C322F720D3D6900045E02A /* SCSDKCreativeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C322F020D3D6900045E02A /* SCSDKCreativeKit.framework */; };
-		28C322F820D3D6900045E02A /* SCSDKCreativeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 28C322F020D3D6900045E02A /* SCSDKCreativeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		28C322FB20D3D83C0045E02A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C322FA20D3D83C0045E02A /* Login.storyboard */; };
 		28C322FD20D3D8500045E02A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C322FC20D3D8500045E02A /* LoginViewController.swift */; };
+		DA77A6D62EE0FBE7488DBD51 /* Pods_SnapClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BCB97D81307E8889F84D4C /* Pods_SnapClient.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		28C322F920D3D6900045E02A /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				28C322F220D3D6900045E02A /* SCSDKLoginKit.framework in Embed Frameworks */,
-				28C322F820D3D6900045E02A /* SCSDKCreativeKit.framework in Embed Frameworks */,
-				28C322F620D3D6900045E02A /* SCSDKCoreKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2842FB3820E895EE00D34863 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
@@ -58,12 +37,11 @@
 		28C322E620D3D6280045E02A /* SCSDKCreativeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SCSDKCreativeKit.framework; path = ../../../../Downloads/SCSDK/SCSDKCreativeKit.framework; sourceTree = "<group>"; };
 		28C322E720D3D6280045E02A /* SCSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SCSDKLoginKit.framework; path = ../../../../Downloads/SCSDK/SCSDKLoginKit.framework; sourceTree = "<group>"; };
 		28C322E820D3D6280045E02A /* SCSDKBitmojiKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SCSDKBitmojiKit.framework; path = ../../../../Downloads/SCSDK/SCSDKBitmojiKit.framework; sourceTree = "<group>"; };
-		28C322ED20D3D68F0045E02A /* SCSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKLoginKit.framework; sourceTree = "<group>"; };
-		28C322EE20D3D68F0045E02A /* SCSDKBitmojiKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKBitmojiKit.framework; sourceTree = "<group>"; };
-		28C322EF20D3D6900045E02A /* SCSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKCoreKit.framework; sourceTree = "<group>"; };
-		28C322F020D3D6900045E02A /* SCSDKCreativeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKCreativeKit.framework; sourceTree = "<group>"; };
 		28C322FA20D3D83C0045E02A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		28C322FC20D3D8500045E02A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		51AFDAB6523B8AD33090ECDE /* Pods-SnapClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapClient/Pods-SnapClient.release.xcconfig"; sourceTree = "<group>"; };
+		56BCB97D81307E8889F84D4C /* Pods_SnapClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADB3FF3CCFBB419945DE0598 /* Pods-SnapClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapClient/Pods-SnapClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28C322F120D3D6900045E02A /* SCSDKLoginKit.framework in Frameworks */,
-				28C322F720D3D6900045E02A /* SCSDKCreativeKit.framework in Frameworks */,
-				28C322F520D3D6900045E02A /* SCSDKCoreKit.framework in Frameworks */,
+				DA77A6D62EE0FBE7488DBD51 /* Pods_SnapClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,13 +81,10 @@
 		28C322C420D3D6000045E02A = {
 			isa = PBXGroup;
 			children = (
-				28C322EE20D3D68F0045E02A /* SCSDKBitmojiKit.framework */,
-				28C322EF20D3D6900045E02A /* SCSDKCoreKit.framework */,
-				28C322F020D3D6900045E02A /* SCSDKCreativeKit.framework */,
-				28C322ED20D3D68F0045E02A /* SCSDKLoginKit.framework */,
 				28C322CF20D3D6000045E02A /* SnapClient */,
 				28C322CE20D3D6000045E02A /* Products */,
 				28C322E420D3D6280045E02A /* Frameworks */,
+				8FF562124B73CF55E52A259C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,8 +116,18 @@
 				28C322E520D3D6280045E02A /* SCSDKCoreKit.framework */,
 				28C322E620D3D6280045E02A /* SCSDKCreativeKit.framework */,
 				28C322E720D3D6280045E02A /* SCSDKLoginKit.framework */,
+				56BCB97D81307E8889F84D4C /* Pods_SnapClient.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8FF562124B73CF55E52A259C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADB3FF3CCFBB419945DE0598 /* Pods-SnapClient.debug.xcconfig */,
+				51AFDAB6523B8AD33090ECDE /* Pods-SnapClient.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,10 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28C322E120D3D6020045E02A /* Build configuration list for PBXNativeTarget "SnapClient" */;
 			buildPhases = (
+				3940904CB1180623ACDAD552 /* [CP] Check Pods Manifest.lock */,
 				28C322C920D3D6000045E02A /* Sources */,
 				28C322CA20D3D6000045E02A /* Frameworks */,
 				28C322CB20D3D6000045E02A /* Resources */,
-				28C322F920D3D6900045E02A /* Embed Frameworks */,
+				E1DD8BF64BF19C47EFB5E8C4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,6 +200,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3940904CB1180623ACDAD552 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SnapClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1DD8BF64BF19C47EFB5E8C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SnapClient/Pods-SnapClient-frameworks.sh",
+				"${PODS_ROOT}/SnapSDK/SCSDKCreativeKit.framework",
+				"${PODS_ROOT}/SnapSDK/SCSDKCoreKit.framework",
+				"${PODS_ROOT}/SnapSDK/SCSDKLoginKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKCreativeKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKLoginKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapClient/Pods-SnapClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		28C322C920D3D6000045E02A /* Sources */ = {
@@ -368,6 +395,7 @@
 		};
 		28C322E220D3D6020045E02A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADB3FF3CCFBB419945DE0598 /* Pods-SnapClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -377,10 +405,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SnapClient/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.kboy.blackchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -390,6 +415,7 @@
 		};
 		28C322E320D3D6020045E02A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51AFDAB6523B8AD33090ECDE /* Pods-SnapClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -399,10 +425,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SnapClient/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.kboy.blackchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
