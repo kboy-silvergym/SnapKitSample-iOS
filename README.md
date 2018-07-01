@@ -9,6 +9,9 @@ https://docs.snapchat.com/docs/login-kit/
 Following this document, you can implement SnapChat login. 
 You can fetch displayName & avatar (bitmoji avatar) so far.
 
+<img src="https://user-images.githubusercontent.com/17683316/42132023-729a370a-7d4a-11e8-9fff-c93cd4940e69.gif" width="250">
+
+
 There're some difficult points, so I note about that here.
 
 ### Equalize Info.plist's `SCSDKRedirectUrl` with `Redirect URLs` on SnapChat Developer Portal (https://kit.snapchat.com/portal/)
