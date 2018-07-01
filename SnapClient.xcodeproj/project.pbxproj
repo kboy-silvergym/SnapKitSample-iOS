@@ -12,7 +12,7 @@
 		2842FB3D20E89B7700D34863 /* LoginConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842FB3C20E89B7700D34863 /* LoginConfirmViewController.swift */; };
 		28C322D120D3D6000045E02A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C322D020D3D6000045E02A /* AppDelegate.swift */; };
 		28C322D320D3D6000045E02A /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C322D220D3D6000045E02A /* art.scnassets */; };
-		28C322D520D3D6000045E02A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C322D420D3D6000045E02A /* ViewController.swift */; };
+		28C322D520D3D6000045E02A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C322D420D3D6000045E02A /* CameraViewController.swift */; };
 		28C322D820D3D6000045E02A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C322D620D3D6000045E02A /* Main.storyboard */; };
 		28C322DA20D3D6020045E02A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C322D920D3D6020045E02A /* Assets.xcassets */; };
 		28C322DD20D3D6020045E02A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C322DB20D3D6020045E02A /* LaunchScreen.storyboard */; };
@@ -28,7 +28,7 @@
 		28C322CD20D3D6000045E02A /* SnapClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C322D020D3D6000045E02A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28C322D220D3D6000045E02A /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		28C322D420D3D6000045E02A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		28C322D420D3D6000045E02A /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		28C322D720D3D6000045E02A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28C322D920D3D6020045E02A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28C322DC20D3D6020045E02A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 				2842FB3A20E89B4E00D34863 /* LoginConfirm.storyboard */,
 				28C322D620D3D6000045E02A /* Main.storyboard */,
 				28C322FC20D3D8500045E02A /* LoginViewController.swift */,
-				28C322D420D3D6000045E02A /* ViewController.swift */,
+				28C322D420D3D6000045E02A /* CameraViewController.swift */,
 				2842FB3C20E89B7700D34863 /* LoginConfirmViewController.swift */,
 			);
 			path = View;
@@ -251,7 +251,7 @@
 			files = (
 				2842FB3D20E89B7700D34863 /* LoginConfirmViewController.swift in Sources */,
 				28C322FD20D3D8500045E02A /* LoginViewController.swift in Sources */,
-				28C322D520D3D6000045E02A /* ViewController.swift in Sources */,
+				28C322D520D3D6000045E02A /* CameraViewController.swift in Sources */,
 				28C322D120D3D6000045E02A /* AppDelegate.swift in Sources */,
 				2842FB3920E895EE00D34863 /* UserEntity.swift in Sources */,
 			);
@@ -405,7 +405,10 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SnapClient/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.kboy.blackchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -425,7 +428,10 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SnapClient/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.kboy.blackchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

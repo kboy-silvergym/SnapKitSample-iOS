@@ -9,15 +9,13 @@
 import UIKit
 import SceneKit
 import ARKit
+import SCSDKCreativeKit
 
-class ViewController: UIViewController {
+class CameraViewController: UIViewController {
     @IBOutlet var sceneView: ARSCNView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        sceneView.delegate = self
-        sceneView.showsStatistics = true
         
         let scene = SCNScene(named: "art.scnassets/ship.scn")!
         sceneView.scene = scene
@@ -36,22 +34,20 @@ class ViewController: UIViewController {
         sceneView.session.pause()
     }
     
-}
-
-extension ViewController: ARSCNViewDelegate {
-    
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        // Present an error message to the user
+    @IBAction func snapButtonTapped(_ sender: Any) {
+        let snapshot = sceneView.snapshot()
+        let photo = SCSDKSnapPhoto(image: snapshot)
+        let snap = SCSDKPhotoSnapContent(snapPhoto: photo)
+        snap.attachmentUrl = "https://newcapsulecorp.com"
         
-    }
-    
-    func sessionWasInterrupted(_ session: ARSession) {
-        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-        
-    }
-    
-    func sessionInterruptionEnded(_ session: ARSession) {
-        // Reset tracking and/or remove existing anchors if consistent tracking is required
-        
+        let api = SCSDKSnapAPI(content: snap)
+        api.startSnapping { error in
+            
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                // success
+            }
+        }
     }
 }
