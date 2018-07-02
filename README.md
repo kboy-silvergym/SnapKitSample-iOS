@@ -108,6 +108,12 @@ api.startSnapping { error in
 }
 ```
 
+### TODO
+
+- [ ] SCSDKVideoSnapContent
+- [ ] SCSDKPhotoSnapContent
+- [ ] SCSDKSnapSticker
+
 ## Bitmoji Kit
 <img src="https://user-images.githubusercontent.com/17683316/42131995-9914d864-7d49-11e8-95de-f8c053b2f706.png" width="100">
 
