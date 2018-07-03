@@ -38,7 +38,16 @@ class CameraViewController: UIViewController {
         let snapshot = sceneView.snapshot()
         let photo = SCSDKSnapPhoto(image: snapshot)
         let snap = SCSDKPhotoSnapContent(snapPhoto: photo)
-        snap.attachmentUrl = "https://www.graffity.jp/"
+        
+        // Sticker
+        let sticker = SCSDKSnapSticker(stickerImage: #imageLiteral(resourceName: "snap-ghost"))
+        snap.sticker = sticker
+        
+        // Caption
+        snap.caption = "Snap on Snapchat!"
+        
+        // URL
+        snap.attachmentUrl = "https://www.snapchat.com"
         
         let api = SCSDKSnapAPI(content: snap)
         api.startSnapping { error in
