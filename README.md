@@ -84,9 +84,11 @@ Following this document https://docs.snapchat.com/docs/creative-kit/
 
 This is so easy to code.
 
-<img src="https://user-images.githubusercontent.com/17683316/42136191-ef25554c-7d91-11e8-97ac-42df7903dbbb.gif" width="250">
+You can share a photo or video attaching a sticker, url, and caption.
 
-Only you should do is just coding like below.
+<img src="https://user-images.githubusercontent.com/17683316/42210546-402b855a-7eec-11e8-91f1-4c04e3242113.gif" width="250">
+
+### Sample Code
 
 ```swift
 import SCSDKCreativeKit
@@ -94,7 +96,16 @@ import SCSDKCreativeKit
 let snapshot = sceneView.snapshot() // Any image is OK. In this codes, SceneView's snapshot is passed.
 let photo = SCSDKSnapPhoto(image: snapshot)
 let snap = SCSDKPhotoSnapContent(snapPhoto: photo)
-snap.attachmentUrl = "https://www.graffity.jp/"
+
+// Sticker
+let sticker = SCSDKSnapSticker(stickerImage: #imageLiteral(resourceName: "snap-ghost"))
+snap.sticker = sticker
+        
+// Caption
+snap.caption = "Snap on Snapchat!"
+        
+// URL
+snap.attachmentUrl = "https://www.snapchat.com"
         
 let api = SCSDKSnapAPI(content: snap)
 api.startSnapping { error in
@@ -102,17 +113,13 @@ api.startSnapping { error in
     if let error = error {
         print(error.localizedDescription)
     } else {
-    // success
+        // success
     
     }
 }
 ```
 
-### TODO
-
-- [ ] SCSDKVideoSnapContent
-- [ ] SCSDKPhotoSnapContent
-- [ ] SCSDKSnapSticker
+If you use `SCSDKVideoSnapContent`, you can share the videos.
 
 ## Bitmoji Kit
 <img src="https://user-images.githubusercontent.com/17683316/42131995-9914d864-7d49-11e8-95de-f8c053b2f706.png" width="100">
