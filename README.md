@@ -174,7 +174,7 @@ You can add the picker view as child viewController. It's very easy.
 
 ### Inherit SCSDKBitmojiStickerPickerViewControllerDelegate
 
-If you Inherit SCSDKBitmojiStickerPickerViewControllerDelegate, you can track events when the piker is selected, and the serach fieled is focused.
+If you Inherit SCSDKBitmojiStickerPickerViewControllerDelegate, you can track events when the piker is selected, and the serach field is focused.
 
 In this demo codes, it makes the AR stamps by the URL of bitmoji and place to the sceneView.
 
