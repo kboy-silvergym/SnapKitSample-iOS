@@ -141,7 +141,7 @@ SCSDKBitmojiClient.fetchAvatarURL { (avatarURL: String?, error: Error?) in
 }
 ```
 
-### Show bitmoji pickeview
+### Show bitmoji pickerview
 
 The SCSDKBitmojiStickerPickerViewController is prepared in SCSDKBitmojiKit.
 
