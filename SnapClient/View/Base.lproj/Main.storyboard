@@ -41,12 +41,22 @@
                                     <action selector="snapButtonTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="P6f-a2-VAt"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="soD-dz-LDO">
+                                <rect key="frame" x="16" y="20" width="44" height="44"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="aKP-Vj-0pC"/>
+                                    <constraint firstAttribute="height" constant="44" id="xvm-n8-I49"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="sOk-bf-kwE" firstAttribute="centerX" secondItem="TXs-Df-WdX" secondAttribute="centerX" id="GKD-YS-TJH"/>
                             <constraint firstItem="5yr-j1-gfp" firstAttribute="leading" secondItem="WM5-Iw-2Vl" secondAttribute="leading" id="IuY-Xu-O6s"/>
                             <constraint firstAttribute="bottom" secondItem="5yr-j1-gfp" secondAttribute="bottom" id="bse-sf-MlZ"/>
+                            <constraint firstItem="soD-dz-LDO" firstAttribute="leading" secondItem="WM5-Iw-2Vl" secondAttribute="leading" constant="16" id="fPe-1u-TWY"/>
+                            <constraint firstItem="soD-dz-LDO" firstAttribute="top" secondItem="WM5-Iw-2Vl" secondAttribute="top" id="k3n-iE-cMF"/>
                             <constraint firstItem="5yr-j1-gfp" firstAttribute="top" secondItem="TXs-Df-WdX" secondAttribute="top" id="mg0-nZ-6Id"/>
                             <constraint firstItem="WM5-Iw-2Vl" firstAttribute="bottom" secondItem="sOk-bf-kwE" secondAttribute="bottom" constant="80" id="oX5-an-cqr"/>
                             <constraint firstItem="WM5-Iw-2Vl" firstAttribute="trailing" secondItem="5yr-j1-gfp" secondAttribute="trailing" id="wBE-26-dRB"/>
@@ -54,11 +64,13 @@
                         <viewLayoutGuide key="safeArea" id="WM5-Iw-2Vl"/>
                     </view>
                     <connections>
+                        <outlet property="iconView" destination="soD-dz-LDO" id="ISg-0D-dpc"/>
                         <outlet property="sceneView" destination="5yr-j1-gfp" id="FcS-MJ-hZA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="87.706146926536732"/>
         </scene>
     </scenes>
 </document>

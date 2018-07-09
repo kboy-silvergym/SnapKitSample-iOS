@@ -13,9 +13,24 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Try to login. If you haven't requested yet, userEntity will be nil.
+        self.fetchSnapUserInfo({ (userEntity, error) in
+            
+            if let userEntity = userEntity {
+                DispatchQueue.main.async {
+                    self.goToLoginConfirm(userEntity)
+                }
+            }
+        })
+    }
+    
+    // go to next ViewController
     private func goToLoginConfirm(_ entity: UserEntity){
         let storyboard = UIStoryboard(name: "LoginConfirm", bundle: nil)
         let vc = storyboard.instantiateInitialViewController() as! LoginConfirmViewController
@@ -23,7 +38,9 @@ class LoginViewController: UIViewController {
         present(vc, animated: true, completion: nil)
     }
     
-    private func fetchSnapUserInfo(){
+    // request UserInfo to SnapSDK.
+    // If you haven't requested yet, it will jump to the SnapChat app and get auth.
+    private func fetchSnapUserInfo(_ completion: @escaping ((UserEntity?, Error?) -> ())){
         let graphQLQuery = "{me{displayName, bitmoji{avatar}}}"
         
         SCSDKLoginClient
@@ -32,18 +49,13 @@ class LoginViewController: UIViewController {
                 variables: nil,
                 success: { userInfo in
                     
-                    print(userInfo)
-                    
                     if let userInfo = userInfo,
                         let data = try? JSONSerialization.data(withJSONObject: userInfo, options: .prettyPrinted),
                         let userEntity = try? JSONDecoder().decode(UserEntity.self, from: data) {
-                        
-                        DispatchQueue.main.async {
-                            self.goToLoginConfirm(userEntity)
-                        }
+                        completion(userEntity, nil)
                     }
             }) { (error, isUserLoggedOut) in
-                print(error?.localizedDescription ?? "")
+                completion(nil, error)
         }
     }
     
@@ -56,7 +68,14 @@ class LoginViewController: UIViewController {
             }
             
             if success {
-                self.fetchSnapUserInfo()
+                self.fetchSnapUserInfo({ (userEntity, error) in
+                    
+                    if let userEntity = userEntity {
+                        DispatchQueue.main.async {
+                            self.goToLoginConfirm(userEntity)
+                        }
+                    }
+                })
             }
         })
     }

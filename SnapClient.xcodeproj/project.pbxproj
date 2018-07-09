@@ -10,6 +10,7 @@
 		2842FB3920E895EE00D34863 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842FB3820E895EE00D34863 /* UserEntity.swift */; };
 		2842FB3B20E89B4E00D34863 /* LoginConfirm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2842FB3A20E89B4E00D34863 /* LoginConfirm.storyboard */; };
 		2842FB3D20E89B7700D34863 /* LoginConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842FB3C20E89B7700D34863 /* LoginConfirmViewController.swift */; };
+		287526F320F3450800601FE0 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287526F220F3450800601FE0 /* UIImage+Extension.swift */; };
 		28C322D120D3D6000045E02A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C322D020D3D6000045E02A /* AppDelegate.swift */; };
 		28C322D320D3D6000045E02A /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C322D220D3D6000045E02A /* art.scnassets */; };
 		28C322D520D3D6000045E02A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C322D420D3D6000045E02A /* CameraViewController.swift */; };
@@ -21,10 +22,24 @@
 		DA77A6D62EE0FBE7488DBD51 /* Pods_SnapClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BCB97D81307E8889F84D4C /* Pods_SnapClient.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		287526F020F340FB00601FE0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2842FB3820E895EE00D34863 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		2842FB3A20E89B4E00D34863 /* LoginConfirm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginConfirm.storyboard; sourceTree = "<group>"; };
 		2842FB3C20E89B7700D34863 /* LoginConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfirmViewController.swift; sourceTree = "<group>"; };
+		287526F220F3450800601FE0 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		28C322CD20D3D6000045E02A /* SnapClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C322D020D3D6000045E02A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28C322D220D3D6000045E02A /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -64,8 +79,8 @@
 				2842FB3A20E89B4E00D34863 /* LoginConfirm.storyboard */,
 				28C322D620D3D6000045E02A /* Main.storyboard */,
 				28C322FC20D3D8500045E02A /* LoginViewController.swift */,
-				28C322D420D3D6000045E02A /* CameraViewController.swift */,
 				2842FB3C20E89B7700D34863 /* LoginConfirmViewController.swift */,
+				28C322D420D3D6000045E02A /* CameraViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -76,6 +91,14 @@
 				2842FB3820E895EE00D34863 /* UserEntity.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		287526F120F344FD00601FE0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				287526F220F3450800601FE0 /* UIImage+Extension.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		28C322C420D3D6000045E02A = {
@@ -99,6 +122,7 @@
 		28C322CF20D3D6000045E02A /* SnapClient */ = {
 			isa = PBXGroup;
 			children = (
+				287526F120F344FD00601FE0 /* Utils */,
 				2842FB3F20E8A8C800D34863 /* Model */,
 				2842FB3E20E8A8C100D34863 /* View */,
 				28C322D020D3D6000045E02A /* AppDelegate.swift */,
@@ -142,6 +166,7 @@
 				28C322CA20D3D6000045E02A /* Frameworks */,
 				28C322CB20D3D6000045E02A /* Resources */,
 				E1DD8BF64BF19C47EFB5E8C4 /* [CP] Embed Pods Frameworks */,
+				287526F020F340FB00601FE0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,17 +252,25 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SnapClient/Pods-SnapClient-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${PODS_ROOT}/SnapSDK/SCSDKBitmojiKit.framework",
 				"${PODS_ROOT}/SnapSDK/SCSDKCoreKit.framework",
 				"${PODS_ROOT}/SnapSDK/SCSDKCreativeKit.framework",
 				"${PODS_ROOT}/SnapSDK/SCSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKBitmojiKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKCreativeKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -252,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2842FB3D20E89B7700D34863 /* LoginConfirmViewController.swift in Sources */,
+				287526F320F3450800601FE0 /* UIImage+Extension.swift in Sources */,
 				28C322FD20D3D8500045E02A /* LoginViewController.swift in Sources */,
 				28C322D520D3D6000045E02A /* CameraViewController.swift in Sources */,
 				28C322D120D3D6000045E02A /* AppDelegate.swift in Sources */,
@@ -407,7 +441,10 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SnapClient/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.kboy.blackchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -427,7 +464,10 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SnapClient/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.kboy.blackchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

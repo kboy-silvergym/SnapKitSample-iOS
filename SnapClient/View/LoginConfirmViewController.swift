@@ -30,15 +30,8 @@ class LoginConfirmViewController: UIViewController {
         goButton.backgroundColor = .yellow
         
         // set Image
-        guard let avatarString = userEntity?.avatar,
-            let imageURL = URL(string: avatarString) else { return }
-        do {
-            let data = try Data(contentsOf: imageURL)
-            let image = UIImage(data: data)
-            avatarImageView.image = image
-        } catch {
-            
-        }
+        guard let avatarString = userEntity?.avatar else { return }
+        avatarImageView.load(from: avatarString)
     }
     
     private func goToCamera(){

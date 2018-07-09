@@ -13,13 +13,29 @@ import SCSDKCreativeKit
 import SCSDKBitmojiKit
 
 class CameraViewController: UIViewController {
-    @IBOutlet var sceneView: ARSCNView!
+    @IBOutlet weak var sceneView: ARSCNView!
+    @IBOutlet weak var iconView: UIImageView! {
+        didSet {
+            iconView.backgroundColor = .white
+            iconView.layer.cornerRadius = iconView.frame.width/2
+            iconView.clipsToBounds = true
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let scene = SCNScene(named: "art.scnassets/ship.scn")!
         sceneView.scene = scene
+        
+        // fetch your avatar image.
+        SCSDKBitmojiClient.fetchAvatarURL { (avatarURL: String?, error: Error?) in
+            DispatchQueue.main.async {
+                if let avatarURL = avatarURL {
+                    self.iconView.load(from: avatarURL)
+                }
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
