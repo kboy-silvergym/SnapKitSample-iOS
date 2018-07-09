@@ -2,6 +2,14 @@
 
 This is an unofficial demo app of the Snap Kit produced by SnapChat.
 
+## Installation
+
+You can install `SnapSDK` via Cocoapods.
+
+```ruby
+pod 'SnapSDK', :subspecs => ['SCSDKLoginKit', 'SCSDKCreativeKit', 'SCSDKBitmojiKit']
+```
+
 ## Login Kit demo
 <img src="https://user-images.githubusercontent.com/17683316/42131965-12afd184-7d49-11e8-931b-0ef5578157df.png" width="100">
 
