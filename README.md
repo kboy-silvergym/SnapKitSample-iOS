@@ -124,7 +124,7 @@ If you use `SCSDKVideoSnapContent`, you can share the videos.
 ## Bitmoji Kit
 <img src="https://user-images.githubusercontent.com/17683316/42131995-9914d864-7d49-11e8-95de-f8c053b2f706.png" width="100">
 
-### fetch avatar image
+### Fetch avatar image
 
 You can fetch your avatar image by coding like below codes.
 
@@ -141,7 +141,7 @@ SCSDKBitmojiClient.fetchAvatarURL { (avatarURL: String?, error: Error?) in
 }
 ```
 
-### show bitmoji pickeview
+### Show bitmoji pickeview
 
 The SCSDKBitmojiStickerPickerViewController is prepared in SCSDKBitmojiKit.
 
@@ -169,6 +169,32 @@ You can add the picker view as child viewController. It's very easy.
     addChildViewController(stickerPickerVC)
     backgroundView.addSubview(stickerPickerVC.view)
     stickerPickerVC.didMove(toParentViewController: self)
+}
+```
+
+### Inherit SCSDKBitmojiStickerPickerViewControllerDelegate
+
+If you Inherit SCSDKBitmojiStickerPickerViewControllerDelegate, you can track events when the piker is selected, and the serach fieled is focused.
+
+In this demo codes, it makes the AR stamps by the URL of bitmoji and place to the sceneView.
+
+```swift
+extension CameraViewController: SCSDKBitmojiStickerPickerViewControllerDelegate {
+    
+    func bitmojiStickerPickerViewController(_ stickerPickerViewController: SCSDKBitmojiStickerPickerViewController, didSelectBitmojiWithURL bitmojiURL: String) {
+        
+        bitmojiSelectionView?.removeFromSuperview()
+        
+        if let image = UIImage.load(from: bitmojiURL) {
+            DispatchQueue.main.async {
+                self.setImageToScene(image: image)
+            }
+        }
+    }
+    
+    func bitmojiStickerPickerViewController(_ stickerPickerViewController: SCSDKBitmojiStickerPickerViewController, searchFieldFocusDidChangeWithFocus hasFocus: Bool) {
+        
+    }
 }
 ```
 
