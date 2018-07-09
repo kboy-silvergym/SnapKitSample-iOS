@@ -209,5 +209,5 @@ extension CameraViewController: SCSDKBitmojiStickerPickerViewControllerDelegate 
 <img src="https://user-images.githubusercontent.com/17683316/42438970-8c02222c-839c-11e8-8ccb-5b0d266aa02a.gif" width="250">
 
 ## Reference
-https://kit.snapchat.com/
-https://storage.googleapis.com/snap-inc/brand-guidelines/snapchat-brand-standards.pdf
+- https://kit.snapchat.com/
+- https://storage.googleapis.com/snap-inc/brand-guidelines/snapchat-brand-standards.pdf
