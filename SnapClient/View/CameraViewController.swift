@@ -22,6 +22,8 @@ class CameraViewController: UIViewController {
         }
     }
     
+    private var bitmojiSelectionView: UIView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,6 +53,29 @@ class CameraViewController: UIViewController {
         sceneView.session.pause()
     }
     
+    
+    // MARK: About creating node
+    
+    private func setImageToScene(image: UIImage) {
+        if let camera = sceneView.pointOfView {
+            let position = SCNVector3(x: 0, y: 0, z: -0.5)
+            let convertedPosition = camera.convertPosition(position, to: nil)
+            let node = createPhotoNode(image, position: convertedPosition)
+            self.sceneView.scene.rootNode.addChildNode(node)
+        }
+    }
+    
+    private func createPhotoNode(_ image: UIImage, position: SCNVector3) -> SCNNode {
+        let node = SCNNode()
+        let scale: CGFloat = 0.3
+        let geometry = SCNPlane(width: image.size.width * scale / image.size.height,
+                                height: scale)
+        geometry.firstMaterial?.diffuse.contents = image
+        node.geometry = geometry
+        node.position = position
+        return node
+    }
+    
     @IBAction func snapButtonTapped(_ sender: Any) {
         let snapshot = sceneView.snapshot()
         let photo = SCSDKSnapPhoto(image: snapshot)
@@ -75,5 +100,46 @@ class CameraViewController: UIViewController {
                 // success
             }
         }
+    }
+    
+    @IBAction func bitmojiButtonTapped(_ sender: Any) {
+        // Make bitmoji background view
+        let viewHeight: CGFloat = 300
+        let screen: CGRect = UIScreen.main.bounds
+        let backgroundView = UIView(
+            frame: CGRect(
+                x: 0,
+                y: screen.height - viewHeight,
+                width: screen.width,
+                height: viewHeight
+            )
+        )
+        view.addSubview(backgroundView)
+        bitmojiSelectionView = backgroundView
+        
+        // add child ViewController
+        let stickerPickerVC = SCSDKBitmojiStickerPickerViewController()
+        stickerPickerVC.delegate = self
+        addChildViewController(stickerPickerVC)
+        backgroundView.addSubview(stickerPickerVC.view)
+        stickerPickerVC.didMove(toParentViewController: self)
+    }
+}
+
+extension CameraViewController: SCSDKBitmojiStickerPickerViewControllerDelegate {
+    
+    func bitmojiStickerPickerViewController(_ stickerPickerViewController: SCSDKBitmojiStickerPickerViewController, didSelectBitmojiWithURL bitmojiURL: String) {
+        
+        bitmojiSelectionView?.removeFromSuperview()
+        
+        if let image = UIImage.load(from: bitmojiURL) {
+            DispatchQueue.main.async {
+                self.setImageToScene(image: image)
+            }
+        }
+    }
+    
+    func bitmojiStickerPickerViewController(_ stickerPickerViewController: SCSDKBitmojiStickerPickerViewController, searchFieldFocusDidChangeWithFocus hasFocus: Bool) {
+        
     }
 }
