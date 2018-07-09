@@ -124,7 +124,55 @@ If you use `SCSDKVideoSnapContent`, you can share the videos.
 ## Bitmoji Kit
 <img src="https://user-images.githubusercontent.com/17683316/42131995-9914d864-7d49-11e8-95de-f8c053b2f706.png" width="100">
 
-WIP..
+### fetch avatar image
+
+You can fetch your avatar image by coding like below codes.
+
+```swift
+import SCSDKBitmojiKit
+
+// fetch your avatar image.
+SCSDKBitmojiClient.fetchAvatarURL { (avatarURL: String?, error: Error?) in
+    DispatchQueue.main.async {
+        if let avatarURL = avatarURL {
+            self.iconView.load(from: avatarURL)
+        }
+    }
+}
+```
+
+### show bitmoji pickeview
+
+The SCSDKBitmojiStickerPickerViewController is prepared in SCSDKBitmojiKit.
+
+You can add the picker view as child viewController. It's very easy.
+
+```swift
+@IBAction func bitmojiButtonTapped(_ sender: Any) {
+    // Make bitmoji background view
+    let viewHeight: CGFloat = 300
+    let screen: CGRect = UIScreen.main.bounds
+    let backgroundView = UIView(
+        frame: CGRect(
+            x: 0,
+            y: screen.height - viewHeight,
+            width: screen.width,
+            height: viewHeight
+        )
+    )
+    view.addSubview(backgroundView)
+    bitmojiSelectionView = backgroundView
+    
+    // add child ViewController
+    let stickerPickerVC = SCSDKBitmojiStickerPickerViewController()
+    stickerPickerVC.delegate = self
+    addChildViewController(stickerPickerVC)
+    backgroundView.addSubview(stickerPickerVC.view)
+    stickerPickerVC.didMove(toParentViewController: self)
+}
+```
+
+<img src="https://user-images.githubusercontent.com/17683316/42438970-8c02222c-839c-11e8-8ccb-5b0d266aa02a.gif" width="250">
 
 ## Reference
 https://kit.snapchat.com/
