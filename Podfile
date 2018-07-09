@@ -4,6 +4,6 @@
 target 'SnapClient' do
   use_frameworks!
 
-  pod 'SnapSDK', :subspecs => ['SCSDKLoginKit', 'SCSDKCreativeKit']
+  pod 'SnapSDK', :subspecs => ['SCSDKLoginKit', 'SCSDKCreativeKit', 'SCSDKBitmojiKit']
   
 end

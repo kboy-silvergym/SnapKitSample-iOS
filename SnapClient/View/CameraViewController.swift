@@ -10,6 +10,7 @@ import UIKit
 import SceneKit
 import ARKit
 import SCSDKCreativeKit
+import SCSDKBitmojiKit
 
 class CameraViewController: UIViewController {
     @IBOutlet var sceneView: ARSCNView!
