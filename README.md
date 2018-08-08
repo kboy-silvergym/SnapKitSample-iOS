@@ -1,6 +1,6 @@
 ![snapkit-sample-ios](https://user-images.githubusercontent.com/17683316/42133453-51ae48ea-7d65-11e8-980c-3a93026255d2.png)
 
-This is an unofficial demo app of the Snap Kit produced by SnapChat.
+This is an **unofficial** demo app of the Snap Kit produced by SnapChat.
 
 ## Installation
 
@@ -10,7 +10,7 @@ You can install `SnapSDK` via Cocoapods.
 pod 'SnapSDK', :subspecs => ['SCSDKLoginKit', 'SCSDKCreativeKit', 'SCSDKBitmojiKit']
 ```
 
-## Login Kit demo
+## Login Kit
 <img src="https://user-images.githubusercontent.com/17683316/42131965-12afd184-7d49-11e8-931b-0ef5578157df.png" width="100">
 
 First of all, you should check this document.
